@@ -1,8 +1,11 @@
 <template>
 <div class="shopping">
+    <!-- 框架背景图 -->
     <div class="fixed top-0 left-0 w-full h-[35rem] -z-10 transform -translate-y-0 bg-cover bg-center overflow-hidden"
      style="background-image: url('https://ts1.tc.mm.bing.net/th/id/R-C.0970ba40ebca3d0ecb8299b714139c0b?rik=HTkpJu4RF3l%2f2Q&riu=http%3a%2f%2f5b0988e595225.cdn.sohucs.com%2fimages%2f20181113%2f131064397ea5446995311aac3822e4c4.jpeg&ehk=ByQirVOZE5nnBeTl1WbMS%2ft%2bMoHrgdWa0diG6v5%2bIZs%3d&risl=&pid=ImgRaw&r=0');" />
-    <header class="search flex items-center text-sm mt-4 mx-4 bg-white rounded-full shadow-md">
+    <!-- 头部部分 -->
+     <header class="search flex items-center text-sm mt-4 mx-4 bg-white rounded-full shadow-md">
+        <!-- 车辆品牌选择框 -->
         <div class="place font-bold text-lg font-serif">
             
             <div
@@ -22,7 +25,7 @@
             </van-popup>
 
         </div>
-
+        <!-- 搜索栏 -->
         <van-search
             v-model="searchField"
             placeholder="商品/关键字"
@@ -33,8 +36,11 @@
         </van-search>
 
     </header>
+    <!-- 主体部分 -->
     <main class="menu">
+        <!-- 主体头部部分 -->
         <header class="min-h-18 rounded-2xl p-2 shadow-md mx-4 my-4 border bg-blue-200 bg-opacity-50">
+            <!-- 导航栏 -->
             <section class="topbar flex justify-around my-[0.5rem]">
                 <div
                 class="topbar-item flex flex-col items-center"
@@ -50,6 +56,7 @@
                 </div>
             </section>
         </header>
+        <!-- 主体主要内容 -->
         <body>
             <section class="recommend mx-4 p-2 text-sm text-black bg-white bg-opacity-80 rounded-2xl shadow-md">
                 <div class="flex justify-between items-center">
@@ -60,12 +67,14 @@
                         <van-tag type="warning">{{ fieldValue }}</van-tag>
                     </p>
                  </div>
-
+                 <!-- 车辆类型选择 -->
                  <van-tabs v-model:active="active">
+                    <!-- 类型选择栏 -->
                     <van-tab
                         :title="items.title"
                         v-for="items in recommendItemState"
                     >
+                        <!-- 显示车辆类型的款式 -->
                         <div v-for="item in items.items"  class="item" :class="item.type">
                             <div v-if="showRec(item.type)" class="text my-2 py-1 flex bg-gray-100 rounded-lg " >
                                 <div class="item-img w-[10rem] h-[8rem] overflow-hidden rounded-lg">
