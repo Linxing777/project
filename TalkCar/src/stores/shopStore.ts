@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
 // 关键数据要限制类型
 import { ref } from "vue";
-// 引诱 面试官 es6 module 问题
+
 import type {
     ShopTopBarItem,
     recommendItem

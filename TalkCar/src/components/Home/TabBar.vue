@@ -44,6 +44,8 @@ onMounted(() => {
     }
     else if(router.currentRoute.value.path == "/mine"){
         active.value = 3; 
+    }else if(router.currentRoute.value.path == "/assistant"){
+        active.value = 0;
     }
 });
 </script>
