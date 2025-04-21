@@ -10,7 +10,7 @@ const rootRoutes : RouteRecordRaw[] = [
             title:'首页',
             cache:true
         },
-        component: () => import('../views/Home/Home.vue')
+        component: () => import('@/views/Home/Home.vue')
     },
     {
         path: 'assistant',
@@ -19,7 +19,7 @@ const rootRoutes : RouteRecordRaw[] = [
             title: 'ai助手',
             cache:true
         },
-        component: () => import('../views/Assistant/Assistant.vue')
+        component: () => import('@/views/Assistant/Assistant.vue')
     },
     {
         path:'shopping',
@@ -28,7 +28,7 @@ const rootRoutes : RouteRecordRaw[] = [
             title: '商城',
             cache:true
         },
-        component: () => import('../views/Shop/Shopping.vue')
+        component: () => import('@/views/Shop/Shopping.vue')
     },
     {
         path:'mine',
@@ -37,7 +37,7 @@ const rootRoutes : RouteRecordRaw[] = [
             title: '个人中心',
             cache:false
         },
-        component: () => import('../views/My/Mine.vue')
+        component: () => import('@/views/My/Mine.vue')
     }
 
 
