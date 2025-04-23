@@ -95,10 +95,15 @@ const SubmitEvent = async () => {
   try{
     const datas = await getCozeData(msg);
     falg.value = true;
-    const result = datas.data.messages[0].content;
-    items.value.push({
+    const result = datas.data.messages;
+    console.log(result);
+    const elements = result.forEach(element => {
+      if(element.type == "answer"){
+        items.value.push({
         type: 1,
-        msg: result ,
+        msg: element.content,
+      });
+    }
     });
   }catch(error){
     console.log(error);
