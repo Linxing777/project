@@ -12,12 +12,10 @@ export function useIntersectionObserver() {
 }
 function createIntersectionObserver() {
     const observer = new IntersectionObserver((entries) => {
-
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 loadImage(entry.target as HTMLImageElement);
                 observer.unobserve(entry.target); // 加载后取消观察
-                // console.log("观察完毕");
             }
         });
     }, options);

@@ -47,7 +47,7 @@ const routes : RouteRecordRaw[]= [
     {
         path:'/',
         name:'App',
-        component: () => import('../views/KeepAlive.vue'),
+        component: () => import('@/views/KeepAlive.vue'),
         redirect: '/home',
         children:rootRoutes
     },
