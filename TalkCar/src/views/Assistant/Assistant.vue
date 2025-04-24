@@ -79,10 +79,10 @@ const falg = ref(true);
 // 提交事件
 const SubmitEvent = async () => {
   if(searchField.value == ""){
-    items.value.push({
-      type: 1,
-      msg: "请输入您的问题"
-    })
+    // items.value.push({
+    //   type: 1,
+    //   msg: "请输入您的问题"
+    // })
     return;   
   } 
   const msg = searchField.value;
