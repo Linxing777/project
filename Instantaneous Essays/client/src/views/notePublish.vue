@@ -77,16 +77,16 @@ const state = reactive({
   content: "",
   title: "",
   img: [],
-  note_type: "2024年季后赛",
+  note_type: "2025年",
 });
 
 const actions = [
-  { text: "2024年季后赛", value: "2024年季后赛" },
-  { text: "2024年夏季联赛", value: "2024年夏季联赛" },
-  { text: "2024年常规赛", value: "2024年常规赛" },
-  { text: "2023年季后赛", value: "2023年季后赛" },
-  { text: "2023年夏季联赛", value: "2023年夏季联赛" },
-  { text: "2023年常规赛", value: "2023年常规赛" },
+  { text: "2025年", value: "2025年" },
+  { text: "2024年", value: "2024年" },
+  { text: "2023年", value: "2023年" },
+  { text: "2022年", value: "2022年" },
+  { text: "2021年", value: "2021年" },
+  { text: "2020年", value: "2020年" },
 ];
 const showPicker = ref(false);
 

@@ -12,7 +12,7 @@ router.post('/login', async (ctx, next) => {
         const { username, password } = ctx.request.body;
         // 查询数据库账号密码是否存在
         const result = await userLogin(username, password);
-        // console.log(result);
+        console.log(result);
         // 存在就是拥有账号
         if (result.length) {
             const data = {

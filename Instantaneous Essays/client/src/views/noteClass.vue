@@ -37,12 +37,12 @@ import { useRouter } from "vue-router";
 
 const router = useRouter();
 const noteClassList = [
-  { bgColor: "#f0aa84", title: "2024年季后赛" },
-  { bgColor: "#dcf189", title: "2024年夏季联赛" },
-  { bgColor: "#e0c2f1", title: "2024年常规赛" },
-  { bgColor: "#c2ebf1", title: "2023年季后赛" },
-  { bgColor: "#949c9d", title: "2023年夏季规赛" },
-  { bgColor: "#f1c27a", title: "2023年常规赛" },
+  { bgColor: "#f0aa84", title: "2025年" },
+  { bgColor: "#dcf189", title: "2024年" },
+  { bgColor: "#e0c2f1", title: "2023年" },
+  { bgColor: "#c2ebf1", title: "2022年" },
+  { bgColor: "#949c9d", title: "2021年" },
+  { bgColor: "#f1c27a", title: "2020年" },
 ];
 const showMenu = ref(false);
 const handleChangeShowMenu = (value) => {
