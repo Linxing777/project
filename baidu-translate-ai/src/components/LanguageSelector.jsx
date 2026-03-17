@@ -1,6 +1,9 @@
 const LANGUAGES = {
-    "Acehnese (Arabic script)": "ace_Arab",
-    "Acehnese (Latin script)": "ace_Latn",
+    "中文（简体）": "zho_Hans",
+    "English": "eng_Latn",
+    "French / Français": "fra_Latn",
+    "Acehnese (Arabic)": "ace_Arab",
+    "Acehnese (Latin)": "ace_Latn",
     "Afrikaans": "afr_Latn",
     "Akan": "aka_Latn",
     "Amharic": "amh_Ethi",
@@ -11,8 +14,8 @@ const LANGUAGES = {
     "Ayacucho Quechua": "quy_Latn",
     "Balinese": "ban_Latn",
     "Bambara": "bam_Latn",
-    "Banjar (Arabic script)": "bjn_Arab",
-    "Banjar (Latin script)": "bjn_Latn",
+    "Banjar (Arabic)": "bjn_Arab",
+    "Banjar (Latin)": "bjn_Latn",
     "Bashkir": "bak_Cyrl",
     "Basque": "eus_Latn",
     "Belarusian": "bel_Cyrl",
@@ -25,25 +28,22 @@ const LANGUAGES = {
     "Burmese": "mya_Mymr",
     "Catalan": "cat_Latn",
     "Cebuano": "ceb_Latn",
-    "Chinese (Simplified)": "zho_Hans",
-    "English": "eng_Latn",
-    "French": "fra_Latn",
-  }
+}
 
-const LanguageSelector = (props) =>{
-    const {type,defaultLanguage,onChange} = props
+const LANGUAGE_OPTIONS = Object.entries(LANGUAGES).map(([key, value]) => (
+    <option value={value} key={value}>{key}</option>
+))
+
+const LanguageSelector = ({ type, id, value, onChange }) => {
     return (
         <div className="language-selector">
-            <label>{type}</label>
-            <select 
-                onChange={onChange} 
-                defaultValue={defaultLanguage}
+            <label htmlFor={id}>{type}</label>
+            <select
+                id={id}
+                value={value}
+                onChange={(e) => onChange(e.target.value)}
             >
-                {
-                    Object.entries(LANGUAGES).map(([key,value]) => {
-                        return <option value={value} key={key}>{key}</option>
-                    })
-                }
+                {LANGUAGE_OPTIONS}
             </select>
         </div>
     )
